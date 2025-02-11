@@ -1,0 +1,232 @@
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(15deg, #f0f5ff 0%, #e6f0fa 100%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+    overflow: auto; /* 确保页面可以滚动 */
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 涟漪效果 */
+.ripple {
+    position: fixed; /* 确保涟漪在整个页面上显示 */
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: rippleEffect 1s linear;
+    pointer-events: none; /* 确保涟漪不会影响鼠标事件 */
+    width: 50px; /* 涟漪的初始宽度 */
+    height: 50px; /* 涟漪的初始高度 */
+    margin-left: -25px; /* 确保涟漪中心在鼠标位置 */
+    margin-top: -25px; /* 确保涟漪中心在鼠标位置 */
+    z-index: -1; /* 确保涟漪在其他所有元素的下方 */
+}
+
+@keyframes rippleEffect {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* 头部样式 */
+header {
+    background-color: rgba(248, 248, 248, 0.8);
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 150px;
+}
+
+/* 导航栏样式 */
+/* 导航栏样式 */
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    margin-right: 150px;
+}
+
+.navbar > li {
+    position: relative;
+    margin: 0 10px;
+}
+
+.navbar > li > a,
+.navbar > li.no-link {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    display: block;
+    background: linear-gradient(135deg, #E5FCFF, #e0e0e0); /* 添加渐变背景 */
+    border-radius: 12px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar > li.no-link::after {
+    content: '▾'; /* 默认向下箭头 */
+    margin-left: 5px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 1.2em; /* 调大箭头 */
+    transition: transform 0.3s ease;
+}
+
+.navbar > li.no-link:hover::after {
+    transform: rotate(180deg); /* 悬停时反转箭头 */
+}
+
+.navbar > li > a:hover,
+.navbar > li.no-link:hover {
+    background: linear-gradient(135deg, #7692FF, #bbb);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.navbar > li:hover .dropdown {
+    display: block;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(135deg, #E5FCFF, #e0e0e0); /* 添加渐变背景 */
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    border-radius: 8px; /* 子菜单的圆角 */
+}
+
+.dropdown > li > a {
+    padding: 10px 15px;
+    display: block;
+    text-decoration: none;
+    color: #333;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.dropdown > li > a:hover {
+    /* background-color: #7692FF; */
+    background: linear-gradient(135deg, #7692FF, #bbb);
+    transform: translateY(-2px); /* 悬停时向上移动的效果 */
+}
+
+
+/* 图片样式 */
+.responsive-image {
+    width: 100%;
+    height: auto; /* 保持图片比例 */
+    display: block; /* 确保图片占满整行 */
+    margin-top: -100px;  /* 关键：负边距上移图片 */
+    /* z-index: 1;         确保图片在导航栏下方 */
+}
+
+/* 面包屑导航样式 */
+.breadcrumb {
+    margin-bottom: 20px;
+    font-size: 18px;
+    /* margin-left: 40px; */
+    display: flex;
+    align-items: flex-start;
+}
+
+.breadcrumb a {
+    color: #1a73e8;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: #0c47a1;
+}
+
+/* 主体内容样式 */
+main {
+    padding-top: 80px; /* 确保内容不会被固定的导航栏遮挡 */
+}
+
+.container {
+    display: flex;
+    margin: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    flex-direction: column;
+    height: fit-content;
+}
+
+
+/* 内容模块样式 */
+.content {
+    width: calc(100% - 240px); /* 调整宽度 */
+    margin-left: 240px; /* 调整左边距 */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+
+}
+
+.content-box {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 90%; /* 调整模块宽度 */
+    margin-left: auto; /* 使模块左侧往里缩 */
+    margin-right: auto; /* 保持模块居中 */
+}
+
+/* 页脚样式 */
+footer {
+    background: #35424a;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* 隐藏和显示效果 */
+.hidden {
+    display: none;
+}
+
+.show {
+    display: list-item;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+

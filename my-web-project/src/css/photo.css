@@ -1,0 +1,151 @@
+/* 人物肖像展示区域样式 */
+.portrait-gallery {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: start;
+    margin: 20px;
+    margin-bottom: 80px;
+}
+
+.person-category {
+    flex: 1;
+    margin: 10px;
+    text-align: center;
+}
+
+.person {
+    margin: 10px 0;
+}
+
+.person img {
+    width: 100%;
+    max-width: 400px; /* 调整后的最大宽度 */
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.person img:hover {
+    transform: scale(1.05);
+}
+
+.person p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+}
+
+root {
+    --primary: #4AC6FF;  /* 科技蓝 */
+    --secondary: #7CEC9F; /* 生物绿 */
+    --text: #2D3748;
+}
+
+/* 标题样式 */
+.section-title {
+    text-align:justify;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    position: relative;
+    margin-left: 140px;
+    color: var(--text);
+}
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 3px;
+    background: var(--primary);
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 成员网格布局 */
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 成员卡片 */
+.member-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+.member-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px rgba(74, 198, 255, 0.15);
+}
+
+/* 头像设计 */
+.member-avatar {
+    width: 200px;
+    height: 200px; /* 固定高度以确保图片中心位置 */
+    border-radius: 50%;
+    margin: -70px auto 1.5rem;
+    border: 3px solid var(--primary);
+    box-shadow: 0 0 20px rgba(74, 198, 255, 0.2);
+    transition: transform 0.3s ease;
+    object-fit: cover; /* 确保图片中心位置 */
+    object-position: center; /* 确保图片中心位置 */
+}
+.member-avatar:hover {
+    transform: scale(1.05) rotate(5deg);
+}
+
+/* 信息展示 */
+.member-info {
+    text-align: center;
+}
+.member-name {
+    color: var(--text);
+    margin: 0 0 0.5rem;
+    font-size: 1.4rem;
+}
+.member-role {
+    color: var(--primary);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.member-bio {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* 社交链接 */
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+.social-link:hover {
+    background: var(--primary);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    body { padding: 2rem 1rem; }
+    .section-title { font-size: 2rem; }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>项目设计 - 我的网页项目</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/reference.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+
+</head>
+<body>
+    <header>
+        <div class="logo">TOF-BEs</div>
+        <nav>
+            <ul class="navbar">
+                <li><a href="index.html">首页</a></li>
+                <li class="no-link">项目
+                    <ul class="dropdown">
+                        <li><a href="project-introduction.html">项目介绍</a></li>
+                        <li><a href="project-design.html">项目设计</a></li>
+                        <li><a href="circuit-components.html">线路与元件</a></li>
+                        <li><a href="experiment-design.html">实验设计</a></li>
+                    </ul>
+                </li>
+                <li><a href="human-practice.html">人类实践</a></li>
+                <li><a href="members.html">成员</a></li>
+                <li><a href="modeling.html">建模</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- <img src="../images/head-on-project-design.jpg" alt="项目设计" class="responsive-image"> -->
+        
+        <div class="container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#about">关于我们的项目</a></li>
+                    <li><a href="#inspiration">我们的灵感</a></li>
+                    <li><a href="#goal">我们的项目目标</a></li>
+                    <li><a href="#references">参考文献</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <!-- <div class="breadcrumb">
+                    项目 &gt;  <a href="project-design.html">项目设计</a>
+                </div> -->
+                    <div id="about" class="content-box">
+                    <h2>关于我们的项目</h2>
+                    <p>这里是关于我们的项目的介绍内容。</p>
+                </div>
+                <div id="inspiration" class="content-box">
+                    <h2>我们的灵感</h2>
+                    <p>这里是我们的灵感的介绍内容。</p>
+                </div>
+                <div id="goal" class="content-box">
+                    <h2>我们的项目目标</h2>
+                    <p>这里是我们的项目目标的介绍内容。</p>
+                </div>
+                <div id="references" class="content-box">
+                    <h2>参考文献</h2>
+                    <ol class="references-list">
+                        <li>
+                            <div class="reference-header">
+                                <div class="reference-number">1</div>
+                                <div class="reference-title">文献标题1</div>
+                            </div>
+                            <a class="reference-link" href="https://example.com/1" target="_blank" rel="noopener noreferrer">Website</a>
+                        
+                        </li>
+                        <li>
+                            <div class="reference-header">
+                                <div class="reference-number">2</div>
+                                <div class="reference-title">文献标题2</div>
+                            </div>
+                            <a class="reference-link blurred" href="https://example.com/2" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                        <li>
+                            <div class="reference-header heavy-blurred">
+                                <div class="reference-number">3</div>
+                                <div class="reference-title">文献标题3</div>
+                            </div>
+                            <a class="reference-link hidden" href="https://example.com/3" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                        <li class="hidden">
+                            <div class="reference-header">
+                                <div class="reference-number">4</div>
+                                <div class="reference-title">文献标题4</div>
+                            </div>
+                            <a class="reference-link" href="https://example.com/4" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                        <li class="hidden">
+                            <div class="reference-header">
+                                <div class="reference-number">5</div>
+                                <div class="reference-title">文献标题5</div>
+                            </div>
+                            <a class="reference-link" href="https://example.com/5" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                        <li class="hidden">
+                            <div class="reference-header">
+                                <div class="reference-number">6</div>
+                                <div class="reference-title">文献标题6</div>
+                            </div>
+                            <a class="reference-link" href="https://example.com/6" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                        <li class="hidden">
+                            <div class="reference-header">
+                                <div class="reference-number">7</div>
+                                <div class="reference-title">文献标题7</div>
+                            </div>
+                            <a class="reference-link" href="https://example.com/7" target="_blank" rel="noopener noreferrer">Website</a>
+                        </li>
+                    </ol>
+                    <button class="reference-button" id="show-all-references">Show All References</button>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 我的网页项目</p>
+    </footer>
+    <script src="js/scripts.js"></script>
+    <script src="js/reference.js"></script>
+</body>
+</html>

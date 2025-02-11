@@ -1,0 +1,46 @@
+/* 侧边栏样式 */
+.sidebar {
+    width: 200px; 
+    background-color: rgba(248, 248, 248, 0.8);
+    padding: 20px;
+    margin-top: 150px; /* 调整顶部间距 */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    position: absolute; 
+    opacity: 0; /* 初始状态为透明 */
+    transition: opacity 0.5s ease; /* 添加透明度过渡效果 */
+}
+
+.sidebar.visible {
+    opacity: 1; /* 显示时设置为不透明 */
+}
+
+
+.sidebar.fixed {
+    display: block; /* 滚动到一定位置后显示 */
+    position: fixed; /* 滚动到一定位置后变为固定定位 */
+    top: 0px; /* 固定位置, 不要调整 */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 10px;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.sidebar ul li a:hover,
+.sidebar ul li a.active {
+    background-color: #ddd;
+    transform: scale(1.05);
+}

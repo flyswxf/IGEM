@@ -1,0 +1,169 @@
+<style>
+    /* 基础样式重置 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    /* 3D容器设置 */
+    .timeline-container {
+      perspective: 2000px;
+      height: 600px;
+      overflow: hidden;
+    }
+    
+    /* 滚筒容器 */
+    .polygon-roller {
+      position: relative;
+      width: 400px;
+      height: 500px;
+      margin: 0 auto;
+      transform-style: preserve-3d;
+      transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+    
+    /* 单个研究面 */
+    .research-item {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 40px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      backface-visibility: hidden;
+      transition: opacity 0.5s, transform 0.8s;
+    }
+    
+    /* 内容样式 */
+    .research-item img.avatar {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      margin-bottom: 30px;
+      border: 3px solid #4AC6FF;
+    }
+    
+    .research-item h3 {
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+      color: #2D3748;
+    }
+    
+    .research-item p {
+      color: #718096;
+      font-size: 1.1rem;
+    }
+    
+    /* 激活态样式 */
+    .research-item.active {
+      opacity: 1;
+      transform: translateZ(200px) scale(1);
+    }
+    
+    .research-item:not(.active) {
+      opacity: 0.3;
+      pointer-events: none;
+    }
+    </style>
+    
+    <div class="timeline-container">
+      <div class="polygon-roller">
+        <!-- 研究项1 -->
+        <div class="research-item active">
+          <img src="../images/person1-1.jpg" class="avatar" alt="王小明">
+          <h3>基因回路优化</h3>
+          <p>王小明 · 2024.03</p>
+        </div>
+    
+        <!-- 研究项2 -->
+        <div class="research-item">
+          <img src="../images/person1-2.jpg" class="avatar" alt="李晓红">
+          <h3>高通量筛选平台</h3>
+          <p>李晓红 · 2024.05</p>
+        </div>
+    
+        <!-- 更多研究项... -->
+      </div>
+    </div>
+    
+    <script>
+    class PolygonRoller {
+      constructor(container) {
+        this.roller = container.querySelector('.polygon-roller');
+        this.items = Array.from(container.querySelectorAll('.research-item'));
+        this.currentIndex = 0;
+        this.angleStep = 360 / this.items.length;
+        this.isAnimating = false;
+    
+        // 初始化3D布局
+        this.initLayout();
+        this.bindEvents();
+      }
+    
+      initLayout() {
+        this.items.forEach((item, index) => {
+          const angle = this.angleStep * index;
+          item.style.transform = `
+            rotateY(${angle}deg) 
+            translateZ(${this.calculateZOffset()})
+          `;
+        });
+      }
+    
+      calculateZOffset() {
+        const radius = 500; // 滚筒半径
+        return Math.round(radius / Math.tan(Math.PI / this.items.length)) + 'px';
+      }
+    
+      bindEvents() {
+        let lastScroll = 0;
+        const scrollThreshold = 50;
+    
+        this.roller.addEventListener('wheel', (e) => {
+          e.preventDefault();
+          
+          const now = Date.now();
+          if (now - lastScroll < 800) return;
+          lastScroll = now;
+    
+          const direction = Math.sign(e.deltaY);
+          this.rotate(direction);
+        });
+      }
+    
+      rotate(direction) {
+        if (this.isAnimating) return;
+        this.isAnimating = true;
+    
+        this.currentIndex = (this.currentIndex + direction + this.items.length) % this.items.length;
+        
+        const targetAngle = this.currentIndex * this.angleStep;
+        this.roller.style.transform = `rotateY(${targetAngle}deg)`;
+    
+        this.updateActiveState();
+        
+        setTimeout(() => {
+          this.isAnimating = false;
+        }, 1000);
+      }
+    
+      updateActiveState() {
+        this.items.forEach((item, index) => {
+          const diff = (index - this.currentIndex + this.items.length) % this.items.length;
+          item.classList.toggle('active', diff === 0);
+          
+          // 动态缩放效果
+          item.style.transform = `
+            rotateY(${this.angleStep * index}deg)
+            translateZ(${this.calculateZOffset()})
+            scale(${diff === 0 ? 1 : 0.9})
+          `;
+        });
+      }
+    }
+    
+    // 初始化滚筒
+    new PolygonRoller(document.querySelector('.timeline-container'));
+    </script>
