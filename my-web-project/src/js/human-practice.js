@@ -13,14 +13,26 @@ class PolygonRoller {
         researcher: document.querySelector('.researcher'),
         date: document.querySelector('.date'),
         text: document.querySelector('.detail-text'),
-        // prevArrow: document.querySelector('.arrow.prev'),
-        // nextArrow: document.querySelector('.arrow.next')
       };
-      // 绑定右侧箭头事件
-      // this.detailPanel.prevArrow.addEventListener('click', () => this.rotate(-1));
-      // this.detailPanel.nextArrow.addEventListener('click', () => this.rotate(1));
+      // 右侧的readmore面板
+      this.readMoreBtn = document.querySelector('.read-more-btn');
+      this.modal = document.getElementById('research-modal');
+      this.modalTitle = this.modal.querySelector('.modal-title');
+      this.modalResearcher = this.modal.querySelector('.modal-researcher');
+      this.modalDate = this.modal.querySelector('.modal-date');
+      this.modalText = this.modal.querySelector('.modal-text');
+      this.closeBtn = this.modal.querySelector('.close-btn');
 
-      // 研究数据示例
+      this.readMoreBtn.addEventListener('click', () => this.showModal());
+      this.closeBtn.addEventListener('click', () => this.hideModal());
+      window.addEventListener('click', (event) => {
+          if (event.target === this.modal) {
+              this.hideModal();
+          }
+      });
+
+
+      // 研究数据简略
       this.researchData = [
         {
           title: "基因回路优化",
@@ -42,6 +54,8 @@ class PolygonRoller {
           text: "设计新型生物传感器用于...",
         }
       ];
+
+
 
       this.dotsContainer = container.querySelector('.dots-container');
       this.dots = [];
@@ -127,6 +141,19 @@ class PolygonRoller {
       this.detailPanel.researcher.textContent = data.researcher;
       this.detailPanel.date.textContent = data.date;
       this.detailPanel.text.textContent = data.text;
+    }
+    // 点击readmore后弹出模态框
+    showModal() {
+      const data = this.researchData[this.currentIndex];
+      this.modalTitle.textContent = data.title;
+      this.modalResearcher.textContent = data.researcher;
+      this.modalDate.textContent = data.date;
+      this.modalText.textContent = data.text;
+      this.modal.style.display = 'block';
+    }
+    // 关闭模态框
+    hideModal() {
+      this.modal.style.display = 'none';
     }
 
   

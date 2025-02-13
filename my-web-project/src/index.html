@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的网页项目</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
-        <div class="logo">TOF-BEs</div>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="TOF-BEs Logo" class="logo-image">
+            <span class="logo-text">TOF-BEs</span>
+        </a>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">首页</a></li>
@@ -27,23 +31,83 @@
         </nav>
     </header>
     <main>
-        <section>//这里是主页内容
-            <h2>主页内容</h2>
-            <p>这是我的网页项目的主页。这里可以放置一些介绍性内容。</p>
-            <p>我们致力于创建一个有趣且有用的项目，旨在解决现实世界中的问题。我们的团队由多名成员组成，每个人都在不同的领域有着丰富的经验和知识。</p>
-            <p>在这个项目中，我们将展示我们的设计、实验和研究成果。我们希望通过这个项目，能够为社会带来积极的影响。</p>
-            <h3>我们的目标</h3>
-            <p>我们的主要目标是通过创新的设计和实验，找到解决问题的新方法。我们相信，通过团队的努力，我们能够实现这一目标。</p>
-            <h3>项目进展</h3>
-            <p>目前，我们已经完成了项目的初步设计，并开始进行实验。我们将定期更新项目的进展情况，敬请关注。</p>
-            <h3>联系我们</h3>
-            <p>如果你对我们的项目有任何疑问或建议，请随时联系我们。我们非常乐意听取你的意见。</p>
-            <p>填充以测试滑动效果</p>
-        </section>
+        
+        <div class="scrolling-image-container">
+            <h1 class="page-title">Guardians of the Gut</h1>
+            <div class="overlay-text">
+                <p>微塑料（<5mm的塑料颗粒）已渗透到人类生活的每个角落——从海洋到土壤，从饮用水到食物链，最终通过肠道入侵人体。这些“隐形杀手”不仅破坏肠道菌群平衡，导致炎症和代谢紊乱，更可能携带重金属与持久性有机污染物，威胁全球健康。</p>
+            </div>
+            <img src="../images/head-on-index.jpg" alt="主页" class="scrolling-image">
+        </div>
+
+        <div class="content-block">
+            <div class="text-content">
+                <h2>Nano-Trap™表面展示系统</h2>
+                <p>表达工程化塑料结合蛋白（PBP），通过π-π堆积和疏水作用捕获纳米级塑料</p>
+                <p>仿生贻贝粘蛋白设计增强肠道粘液层滞留。</p>
+            </div>
+            <div class="image-content">
+                <img src="../images/index1.jpg" alt="Nano-Trap">
+            </div>
+        </div>
+
+        <div class="content-block">
+            <div class="image-content">
+                <img src="../images/index1.jpg" alt="Nano-Trap">
+            </div>
+            <div class="text-content">
+                <h2>Nano-Trap™表面展示系统</h2>
+                <p>表达工程化塑料结合蛋白（PBP），通过π-π堆积和疏水作用捕获纳米级塑料</p>
+                <p>仿生贻贝粘蛋白设计增强肠道粘液层滞留。</p>
+            </div>
+        </div>
+
+        <div class="feature-container">
+            <h1>我们提出双重革命性策略：</h1>
+            <h2>通过合成生物学改造益生菌Lactiplantibacillus plantarum DT88，首次实现：</h2>
+            <div class="features">
+                <div class="feature-item">
+                    <img src="../images/target-capture.jpg" alt="靶向捕获">
+                    <h3>靶向捕获</h3>
+                    <p>工程化生物膜高效吸附肠道微塑料</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../images/active-degradation.jpg" alt="主动降解">
+                    <h3>主动降解</h3>
+                    <p>分泌塑料解聚酶系统分解PET/PE微颗粒</p>
+                </div>
+                <div class="feature-item">
+                    <img src="../images/ecological-restoration.jpg" alt="生态修复">
+                    <h3>生态修复</h3>
+                    <p>分泌后生元物质促进肠道菌群重建</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="content-block">
+            <div class="text-content">
+                <h2>Nano-Trap™表面展示系统</h2>
+                <p>表达工程化塑料结合蛋白（PBP），通过π-π堆积和疏水作用捕获纳米级塑料</p>
+                <p>仿生贻贝粘蛋白设计增强肠道粘液层滞留。</p>
+            </div>
+            <div class="image-content">
+                <img src="../images/index1.jpg" alt="Nano-Trap">
+            </div>
+        </div>
+
+        <div class="chart-block">
+            <h2>Why DT88?</h2>
+            <div class="image-container">
+                <img src="../images/line-chart-on-index.jpg" alt="Why DT88">
+            </div>
+            <p class="centered-text">计算模拟：酶促降解使PET结晶度降低至41%（初始值65%）</p>
+        </div>
+
     </main>
     <footer>
         <p>&copy; 2023 我的网页项目</p>
     </footer>
     <script src="js/scripts.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

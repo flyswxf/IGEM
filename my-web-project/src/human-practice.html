@@ -6,10 +6,11 @@
     <title>人类实践 - 我的网页项目</title>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/human-practice.css">
+    <link rel="stylesheet" href="css/modal.css">
 </head>
 <body>
     <header>
-        <div class="logo">TOF-BEs</div>
+        <a href="index.html" class="logo">TOF-BEs</a>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">首页</a></li>
@@ -28,6 +29,10 @@
         </nav>
     </header>
     <main>
+        <div class="image-title-container">
+            <img src="../images/head-on-human-practice.jpg" alt="建模" class="responsive-image">
+            <div class="image-title">HUMAN PRACTICE</div>
+        </div>
         <div class="container">
             <div class="overview-section">
                 <div class="overview-content">
@@ -80,11 +85,19 @@
                           <span class="date"></span>
                         </div>
                         <p class="detail-text"></p>
+                        <button class="read-more-btn">阅读更多</button>
                       </div>
-                    <!-- <div class="nav-arrows">
-                      <div class="arrow prev">←</div>
-                      <div class="arrow next">→</div>
-                    </div> -->
+                </div>
+
+                <!-- 弹窗 -->
+                <div class="modal" id="research-modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2 class="modal-title"></h2>
+                        <p class="modal-researcher"></p>
+                        <p class="modal-date"></p>
+                        <p class="modal-text"></p>
+                    </div>
                 </div>
             </div>
         </div>
