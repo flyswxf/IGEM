@@ -75,7 +75,7 @@ header {
 }
 
 .logo-image {
-    height: 100px; /* 根据需要调整图片高度 */
+    height: 50px; /* 根据需要调整图片高度 */
     margin-right: 10px; /* 图片和文本之间的间距 */
 }
 
@@ -257,13 +257,53 @@ main {
 }
 
 .content-box {
-    background-color: white;
+    line-height: 1.8; /* 适合中文阅读的行高 */
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     width: 90%; /* 调整模块宽度 */
     margin-left: auto; /* 使模块左侧往里缩 */
     margin-right: auto; /* 保持模块居中 */
+    border-left: 4px solid #1890ff; /* 蓝色强调线 */
+    border-radius: 4px;
+    background-color: #f8fbff; /* 浅蓝背景 */
+    box-shadow: 0 2px 4px rgba(28, 126, 214, 0.1);
+}
+
+/* content-box中的图片 */
+.centered-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%; /* 确保图片不会超出容器宽度 */
+    height: auto; /* 保持图片比例 */
+}
+
+/* 蓝色下划线重点词 */
+/* 只能用span,为什么? */
+.keyword-underline {
+    border-bottom: 2px solid #73c0ff;
+    padding-bottom: 2px;
+    font-weight: 500;
+    max-lines: 2;
+}
+
+/* 对公式的描述 */
+.description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.description ul {
+    list-style-type: disc; /* 使用圆点作为列表项标记 */
+    padding-left: 20px; /* 调整左侧填充以对齐列表项 */
+}
+
+.description li {
+    margin: 5px 0;
+    text-align: left; /* 确保文本左对齐 */
 }
 
 /* 页脚样式 */

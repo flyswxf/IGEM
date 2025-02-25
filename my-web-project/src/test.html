@@ -1,93 +1,81 @@
 <style>
-    /* 基础样式重置 */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    
-    /* 3D容器设置 */
-    .timeline-container {
-      perspective: 2000px;
-      height: 600px;
-      overflow: hidden;
-    }
-    
-    /* 滚筒容器 */
-    .polygon-roller {
-      position: relative;
-      width: 400px;
-      height: 500px;
-      margin: 0 auto;
-      transform-style: preserve-3d;
-      transition: transform 1s cubic-bezier(0.23, 1, 0.32, 1);
-    }
-    
-    /* 单个研究面 */
-    .research-item {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.95);
-      border-radius: 20px;
-      padding: 40px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-      backface-visibility: hidden;
-      transition: opacity 0.5s, transform 0.8s;
-    }
-    
-    /* 内容样式 */
-    .research-item img.avatar {
-      width: 120px;
-      height: 120px;
-      border-radius: 50%;
-      margin-bottom: 30px;
-      border: 3px solid #4AC6FF;
-    }
-    
-    .research-item h3 {
-      font-size: 1.8rem;
-      margin-bottom: 15px;
-      color: #2D3748;
-    }
-    
-    .research-item p {
-      color: #718096;
-      font-size: 1.1rem;
-    }
-    
-    /* 激活态样式 */
-    .research-item.active {
-      opacity: 1;
-      transform: translateZ(200px) scale(1);
-    }
-    
-    .research-item:not(.active) {
-      opacity: 0.3;
-      pointer-events: none;
-    }
+/* 强调文本基础样式 */
+.emphasis-box {
+  font-family: "PingFang SC", "Microsoft YaHei", sans-serif; /* 中文字体栈 */
+  color: #333; /* 主文字颜色 */
+  line-height: 1.8; /* 适合中文阅读的行高 */
+  margin: 1.5rem 0;
+  padding: 1.2rem;
+  border-left: 4px solid #1890ff; /* 蓝色强调线 */
+  background-color: #f8fbff; /* 浅蓝背景 */
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 4px rgba(28, 126, 214, 0.1);
+}
+
+/* 强调标题 */
+.emphasis-box h3 {
+  color: #1890ff; /* 蓝色标题 */
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+/* 带图标的强调块 */
+.emphasis-box.icon-block::before {
+  content: "❗"; /* 可替换为字体图标 */
+  color: #1890ff;
+  position: absolute;
+  left: -32px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+}
+
+/* 蓝色下划线重点词 */
+.keyword-underline {
+  border-bottom: 2px solid #73c0ff;
+  padding-bottom: 2px;
+  font-weight: 500;
+}
+
+/* 蓝色侧边栏式引用 */
+.emphasis-sidebar {
+  border-left: 6px solid #1890ff;
+  background: linear-gradient(to right, #f8fbff 90%, transparent 100%);
+  padding: 1rem 1.5rem;
+  margin: 1.5rem 0;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .emphasis-box {
+      margin: 1rem 0;
+      padding: 1rem;
+  }
+}
     </style>
     
-    <div class="timeline-container">
-      <div class="polygon-roller">
-        <!-- 研究项1 -->
-        <div class="research-item active">
-          <img src="../images/person1-1.jpg" class="avatar" alt="王小明">
-          <h3>基因回路优化</h3>
-          <p>王小明 · 2024.03</p>
-        </div>
-    
-        <!-- 研究项2 -->
-        <div class="research-item">
-          <img src="../images/person1-2.jpg" class="avatar" alt="李晓红">
-          <h3>高通量筛选平台</h3>
-          <p>李晓红 · 2024.05</p>
-        </div>
-    
-        <!-- 更多研究项... -->
-      </div>
-    </div>
-    
+    <!-- 基础强调块 -->
+<div class="emphasis-box">
+  <h3>核心发现</h3>
+  <p>根据最新研究，<span class="keyword-underline">微塑料污染</span>已影响全球83%的饮用水源，其中海洋生态系统的受影响程度最为严重。</p>
+</div>
+    <!-- 基础强调块 -->
+<div class="emphasis-box">
+  <h3>核心发现</h3>
+  <p>根据最新研究，<span class="keyword-underline">微塑料污染</span>已影响全球83%的饮用水源，其中海洋生态系统的受影响程度最为严重。</p>
+</div>
+
+<!-- 侧边栏样式 -->
+<blockquote class="emphasis-sidebar">
+  公众对微塑料问题的认知度在过去三年内提升了47%，但系统性解决方案仍待完善。
+</blockquote>
+
+<!-- 带图标的强调文本 -->
+<div class="emphasis-box icon-block">
+  注意：长期接触微塑料可能导致内分泌失调，建议使用玻璃材质容器替代塑料制品。
+</div>
     <script>
     class PolygonRoller {
       constructor(container) {

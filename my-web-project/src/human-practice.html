@@ -7,10 +7,15 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/human-practice.css">
     <link rel="stylesheet" href="css/modal.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">TOF-BEs</a>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="TOF-BEs Logo" class="logo-image">
+            <span class="logo-text">TOF-BEs</span>
+        </a>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">首页</a></li>
@@ -34,78 +39,243 @@
             <div class="image-title">HUMAN PRACTICE</div>
         </div>
         <div class="container">
-            <div class="overview-section">
-                <div class="overview-content">
-                    <h1>人类实践</h1>
-                    <p>我们的项目不仅仅是一个实验室的研究，更是一个与社会互动的过程。在这里，我们展示了我们的研究成果，以及我们与社会的互动。</p>
-                </div>
-            </div>
-            <div class="main-content">
-                <div class="timeline-container">
-                    <div class="polygon-roller">
-                      <!-- 研究项1 -->
-                      <div class="research-item active">
-                        <div class="textcontent">
-                            <h3>基因回路优化</h3>
-                            <p>王小明 · 2024.03</p>
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#general">发现问题</a></li>
+                    <li><a href="#inspiration">灵感与希望</a></li>
+                    <li><a href="#questionnaire">问卷调查</a></li>
+                    <li><a href="#public">公共</a></li>
+                    <li><a href="#business">创业</a></li>
+                    <li><a href="#summary">总结</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <!-- <div id="about" class="content-box"> -->
+                    <!-- <h2>Record:记录 AND Reflect:反思</h2> -->
+                    <!-- <p>我们通过查阅文献，专家咨询，发布问卷，实地考察等形式回收大量资料和信息，并负责任地记录来自不同利益相关者的反馈，包括正面和负面反映。然后，我们进行Reflect，反思收到的反馈并调整我们的项目设计以确保其有效性、遵守道德标准、安全协议和环境可持续性，实现最大效果在现实世界中应用，让我们的工作切实扎根于实际，做到“世界影响我们的工作”。</p> -->
+                <!-- </div> -->
+                <div class="content-box" id="general">
+                    <h1>收听世界：发现问题</h1>
+                    <p>我们通过查阅文献，专家咨询，发布问卷，实地考察等形式回收大量资料和信息，并负责任地记录来自不同利益相关者的反馈，包括正面和负面反映。然后，我们根据反馈调整我们的项目设计以确保其有效性、遵守道德标准、安全协议和环境可持续性，实现最大效果在现实世界中应用，让我们的工作切实扎根于实际，做到“世界影响我们的工作”。</p>
+                    <div class="content-block-row">
+                        <div class="text-content" id="what">
+                            <h2>微塑料究竟是什么？</h2>
+                            <p>微塑料被定义为直径小于5mm的塑料碎片或者颗粒。这一概念是2004年首次在《science》上被提出的，在2008年明确限定了微塑料的粒径。微塑料分为初级微塑料和次级微塑料，初级微塑料是粒径较大的塑料碎片或者颗粒。而次级微塑料是初级微塑料进入环境以后经过一系列的降解，物理化学变化形成的粒径更小的塑料碎片或颗粒。联合国环境规划署(unep)预计，到2050年全球初级塑料的产量将达到340亿吨，有迅速持续攀升之势。</p>
                         </div>
-                        <img src="../images/person1-1.jpg" class="avatar" alt="王小明">
-                      </div>
-                  
-                      <!-- 研究项2 -->
-                      <div class="research-item">
-                        <div class="textcontent">
-                            <h3>高通量筛选平台</h3>
-                            <p>李晓红 · 2024.05</p>
+                        <div class="image-content">
+                            <img src="../images/human1.jpg" alt="描述图片" class="centered-image">
                         </div>
-                        <img src="../images/person1-2.jpg" class="avatar" alt="李晓红">
-
-                      </div>
-
-                      <!-- 研究项3 -->
-                      <div class="research-item">
-                        <div class="textcontent">
-                            <h3>基因编辑技术</h3>
-                            <p>张三 · 2024.07</p>
-                        </div>
-                        <img src="../images/person1-3.jpg" class="avatar" alt="张三">
-
-                      </div>
-                  
-                      <!-- 更多研究项... -->
                     </div>
-                    <div class="dots-container"></div> <!-- 新增指示点容器 -->
-                </div>
-
-                <div class="detail-panel">
-                    <div class="detail-content">
-                        <h2 class="detail-title"></h2>
-                        <div class="detail-meta">
-                          <span class="researcher"></span>
-                          <span class="date"></span>
+                    <div class="content-block-column">
+                        <div class="text-content" id="everywhere">
+                            <h2>无孔不入的微塑料渗透</h2>
+                            <p>当今人们的生活中，随处可见的塑料制品，如塑料杯，碗，塑料袋，食品包装袋，化妆品中的磨砂膏，清洁泥膜等。人类的饮食被微塑料污染，厄瓜多尔蜂蜜、啤酒、牛奶和点心中检测出粒径13.45-6742.48μm范围内纤维和尺寸2.48-247.54μm之间碎片。此外，在胎盘、胎粪、婴儿粪便、母乳和婴儿配方奶粉中也检测出了16种微塑料。加热塑料，将进一步提升微塑料释放的速度：3分钟的微波加热，能使1cm^2的塑料容器释放出多达422万个微塑料和21.1亿个纳米塑料微粒7。随着现代生活方式改变，人们越发偏好吃外卖、喝咖啡、吨瓶装饮料、使用不粘锅做饭，以及使用塑料餐盘、快热食物等等，微塑料自然不间断地被接纳进人们身体。卡斯蒂略和他的团队估计，人们平均每周摄入约5克微塑料颗粒，相当于一张信用卡的重量。
+                                环境中也有微塑料污染，大气，土壤，海水，淡水，陆地都有检测出微塑料的存在。变成全球性环境污染物，已广泛进入生态系统和食物链。
+                                </p>
                         </div>
-                        <p class="detail-text"></p>
-                        <button class="read-more-btn">阅读更多</button>
-                      </div>
-                </div>
-
-                <!-- 弹窗 -->
-                <div class="modal" id="research-modal">
-                    <div class="modal-content">
-                        <span class="close-btn">&times;</span>
-                        <h2 class="modal-title"></h2>
-                        <p class="modal-researcher"></p>
-                        <p class="modal-date"></p>
-                        <p class="modal-text"></p>
+                        <div class="image-content">
+                            <img src="../images/human2.jpg" alt="描述图片" class="centered-image">
+                        </div>
+                    </div>
+                    <div class="content-block-column">
+                        <div class="text-content" id="health">
+                            <h2>微塑料正在吞噬我们的健康</h2>
+                            <p>新墨西哥大学的研究显示，微塑料不仅在肠道中积累，还能迁移到肝脏、肾脏甚至大脑。
+                                中国科学院沈阳应用生态研究所的研究发现，聚苯乙烯微纳塑料暴露28天后，小鼠肠道微生物的种群结构发生显著变化，潜在致病菌丰度增加，有益菌丰度降低。
+                                微纳塑料可降低肠上皮紧密连接蛋白和肠黏膜蛋白的表达，破坏肠道屏障功能。
+                                微纳塑料抑制了肠系膜淋巴结中T细胞的分化，减少了肠道中分泌型免疫球蛋白A的分泌，增加了致病菌感染的风险。
+                                微塑料暴露后，肠道、肝脏和大脑中的代谢物水平出现显著变化，提示微塑料可能通过改变代谢途径影响全身健康
+                                罗格斯大学的研究发现，微纳米塑料颗粒可显著增加肠道细胞对环境砷和农药的吸收。例如，纳米塑料颗粒使砷的吸收量增加了近6倍，同时毒素的存在也使塑料的吸收量增加了一倍                             
+                                </p>
+                            <p>动物实验破坏了小鼠的肠道屏障和免疫功能，导致行为也出现异常<p>
+                            <div class="image-content">
+                                <img src="../images/human4.png" alt="描述图片" class="centered-image">
+                            </div>
+                            <h3>微塑料的危害机制: </h3>
+                            <button class="read-more-btn">阅读更多</button>
+                            <!-- 弹窗 -->
+                            <div class="modal" id="strategy-modal">
+                                <div class="modal-content">
+                                    <span class="close-btn">&times;</span>
+                                    <div class="image-content">
+                                        <img src="../images/human31.png" alt="描述图片" class="centered-image">
+                                        <img src="../images/human32.png" alt="描述图片" class="centered-image">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p>所以我们经过系统文献查阅得出结论，接触微塑料会破坏肠道微环境稳定性，特别是肠道屏障的影响，引起肠道氧化损伤和炎症，以及肠道上皮的破坏，粘液层减少，微生物紊乱。而现代人类不可避免地暴露于微塑料和纳塑料，微塑料长期积累进一步扩散表现出神经毒性、致癌性、生殖毒性、发育毒性、心血管疾病等，对人体造成持续的健康威胁。微塑料体内降解是亟待研究的破解之法。</p>
                     </div>
                 </div>
-            </div>
+
+                <div class="content-box" id="inspiration">
+                    <h1>灵感与希望</h1>
+                    <div class="text-content">
+                        <span class="keyword-underline">我们发现益生菌（如乳酸菌和双歧杆菌）能够恢复肠道微生物群的平衡，减轻由微塑料引发的炎症和氧化应激。</span>
+                    </div>
+                    <div class="content-block-row">
+                        <div class="text-content">
+                            <p>海南大学利用复合益生菌后生元发酵物（植物乳杆菌hnu082，发酵乳杆菌hnu312，副干酪乳杆菌hnu502）缓解微塑料对小鼠肠道的损伤的实验，给我们带来启示，可以用乳酸菌作为我们的底盘生物。</p>
+                        </div>
+                        <div class="image-content">
+                            <img src="../images/human51.png" alt="描述图片" class="centered-image">
+                        </div>
+                    </div>
+                    <div class="content-block-row">
+                        <div class="image-content">
+                            <img src="../images/human52.png" alt="描述图片" class="centered-image">
+                        </div>
+                        <div class="text-content">
+                            <p>内蒙古农业大学乳品生物技术与工程教育部重点实验室主任张和平教授及其团队自主研发了植物乳杆菌DT88、双歧杆菌乳亚种 Bbm-19、动物双歧杆菌乳亚种 ProSci-246和副干酪乳酪杆菌 PC646等5株功能性乳酸菌及其专利，这些菌株是基于基因组大数据和人工智能的优良乳酸菌高通量精准筛选平台筛选出的，具有维持肠道菌群稳态、免疫调节等功效的功能性乳酸菌，我们将从这其中筛选出底盘生物。</p>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p>我们咨询研派公司，得知“植物乳杆菌DT88”是有强大“排塑”功效的益生菌，能通过特异性吸附包裹微塑料，减少微塑料和肠道粘膜接触，同时通过促进肠道蠕动，加速微塑料排出体外，双管齐下减少微塑料吸收进入人体内。于是我们决定采用“植物乳杆菌DT88”作为我们的底盘生物。</p>
+                    </div>
+                </div>
+
+                <div class="content-box" id="questionnaire">
+                    <h1>问卷调查</h1>
+                    <div class="text-content" id="attetion">
+                        <h2>关注度</h2>
+                        <p>根据调查结果，只有约23%的人表示对微塑料问题非常关注或较多关注，而近77%的人表示关注较少或几乎没有关注。这表明公众对微塑料问题的认知和关注仍然不足，可能影响相关政策和措施的实施。但62.25%的受访者表示非常担心或有些担心微塑料对自己及家人的健康影响。反映出公众对环境污染及其潜在健康风险的广泛认知。<p>
+                    </div>
+                    <div class="image-content-row">
+                        <div class="image-wrapper">
+                            <img src="../images/human61.png" alt="微塑料危害担心程度" class="centered-image">
+                            <span class="image-caption">图1：公众对微塑料危害的担心程度</span>
+                        </div>
+                        <div class="image-wrapper">
+                            <img src="../images/human62.png" alt="微塑料问题关注程度" class="centered-image">
+                            <span class="image-caption">图2：公众对微塑料问题的关注程度</span>
+                        </div>
+                    </div>
+                    <div class="text-content">
+                        <p>不愿意尝试含有乳酸菌的产品来改善肠道健康和减少微塑料的仅占3.42%，表明我们的产品有较大的市场空间。<p>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human53.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <div class="text-content" id="concern">
+                        <h2>顾虑</h2>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human54.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <div class="text-content">
+                        <p>我们分析了调差问卷中受访对象对产品的主要顾虑为以下几方面：</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human63.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <div class="text-content">
+                        <p>我们根据调差结果从以下几个方面改进产品：</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human64.png" alt="描述图片" class="centered-image">
+                    </div>
+                </div>
+                <!-- <div class="content-box">
+                    <h2>Reflect：反思总结</h2>
+                    <p>根据利益相关者的意见，我们不断改进安全设计，确保它不会对周围的生态系统产生负面影响，
+                        并做出从源头解决微塑料排放的绿色倡议。关于项目经济可行性的反馈促使我们探索方法降低成本，
+                        使其对投资者和政策制定者更具吸引力。结合公众了解情况展开微塑料危害科普宣传和公众教育。</p>
+                </div> -->
+                <!-- <div class="content-box"> -->
+                    <!-- <h2>Renew：更上一层楼</h2> -->
+                    <!-- <p>政策建议：向政府相关部门提交政策建议，呼吁加强对微塑料污染的监管。建议制定更严格的塑料制品生产和使用标准，推动可降解材料的研发和应用。</p> -->
+                <!-- </div> -->
+                <div class="content-box" id="public">
+                    <h2>公共：讲座、视频和手册</h2>
+                    <p>我们的教育模块致力于通过一系列精心设计的活动，向不同年龄段的群体普及合成生物学知识。我们的目标是激发中学生、大学生和公众的科学兴趣并培养科学素养。</p>
+                    <h2>科普讲座</h2>
+                    <p>我们寒假期间返校宣讲的同时在高中课堂展开微塑料与合成生物学主题科普讲座，精心设计了互动环节，
+                        介绍微塑料的来源、危害及乳酸菌降解技术的原理。通过互动实验和展示，让同学们直观了解微塑料对健康的影响，
+                        鼓励他们思考如何通过自己的行动保护地球，从而向他们灌输责任感和使命感。
+                        同时宣传IGEM合成生物学大赛，特别提到比赛设置了高中组，鼓励学弟学妹们踊跃参与。此外，我们还分发了自制的小册子和创意礼物作为纪念。</p>
+                    <div class="image-content">
+                        <img src="../images/human71.jpg" alt="描述图片" class="centered-image">
+                    </div>
+                    <h2>社交媒体宣传</h2>
+                    <p>我们创建公众号，定期发布图文内容，利用社交媒体平台发布项目进展和科普内容，吸引公众关注。
+                        通过短视频、图文等形式，传播微塑料污染的严重性和乳酸菌降解技术的潜力。</p>
+                    <div class="image-content">
+                        <img src="../images/human72.png" alt="描述图片" class="centered-image">
+                        <img src="../images/human73.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <h2>科普影片</h2>
+                    <p>对于公众，我们通过各种主要媒体平台发布了科普视频，例如哔哩哔哩、抖音、YouTube、Facebook 和 Instagram。发布视频。旨在以通俗易懂的方式普及科学知识。
+                        这些视频涵盖了合成生物学的基本原理和应用，旨在提高公众的科学素养并激发他们对科学的兴趣。
+                        通过动画和插图，我们使复杂的科学概念变得简单易懂，确保来自不同背景的观众都能受益。这些视频收到了许多网友的好评。</p>
+                    <h2>科普手册</h2>
+                    <p>我们还制作了一本旨在普及微塑料知识和提高公众科学素养的科普手册。该手册详细介绍了微塑料的来源，积累危害和降解方式，帮助读者了解这一复杂的医学问题，从而提高健康意识和降解的警觉性。
+                        同时，它解释了改造乳酸菌降解体内微塑料研发的产品所涉及的科学原理，增强了读者对医疗过程的理解。
+                        此外，该手册深入探讨了合成生物学和 iGEM 竞赛，激发了人们对这一新兴科学领域的兴趣，并展示了合成生物学在降解体内微塑料和制造生物产品中的应用，突出了其创新和潜在有效性。该手册还描述了 iGEM 团队的工作流程，传达了科学研究的基本方法，培养了读者的科学思维和解难能力。鼓励读者思考科学原理在日常生活和职业发展中的应用。
+                        </p>
+                </div>
+                <div class="content-box" id="business">
+                    <h2>创业</h2>
+                    <!-- <h2>迫切的市场需求</h2> -->
+                    <!-- <p>面对微塑料带来的巨大健康负担，以及由此引发的慢性疾病风险，我们迫切需要一种有效的解决方案。</p> -->
+                    <!-- <h2>解决方案</h2> -->
+                    <p>我们创新的基因编辑乳酸菌技术，基于 CRISPR-Cas9 系统，能够精准降解体内微塑料，并将其转化为无害的小分子物质。通过与益生菌干粉产品的结合，我们不仅解决了微塑料在人体内的积累问题，还为用户提供了肠道健康和免疫增强的双重益处，为消费者和医疗保健提供者提供无与伦比的健康保障。我们的产品不仅适用于普通人群，更是为长期暴露在高污染环境中的高风险群体（如外卖族、工业区居民）量身定制。</p>
+                    <!-- <h2>可持续的商业模式</h2> -->
+                    <!-- <p>旨在通过战略定位和市场合作，确保产品的成功推广和广泛应用</p> -->
+                    <div class="text-content">
+                        <h2>利益相关者地图</h2>
+                        <p>我们充分考量利益相关者（包括公众、研发人员、 医生和投资公司）之间的的关系，协调平衡各个组的需求，并进一步与更广泛的利益相关者合作。
+                            我们根据利益相关者在项目中的影响力和兴趣对参与项目的利益相关者进行了详细的分类。根据 Mendelow 矩阵绘制利益相关者地图。</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human81.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <div class="text-content">
+                        <h2>利益相关者的 SWOT 分析</h2>
+                        <p>了解和解决利益相关者的利益对于项目的成功至关重要。他们的观点、需求和关注点会显著影响项目的方向，进展和结果，必须与他们进行密切有效的互动。通过执行对与每个利益相关者群体相关的优势、劣势、机会和威胁进行全面分析，能够更好地预测和应对潜在挑战，从而优化可用资源的使用以实现其目标。
+                            这种全面的方法不仅增强了我们对项目前景的把握，也在整个各个阶段使我们做出调整。</p>
+                    </div>
+                    <div class="image-content">
+                        <img src="../images/human82.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <p>通过访谈收集更详细的反馈和额外的见解，使我们能够有效地满足多样化的需求，并进一步优化我们的项目。</p>
+                    <h2>更广泛的合作对象</h2>
+                    <ul>
+                        <li>食品企业合作：与食品企业合作，探讨改造乳酸菌在食品中的应用。开发具有降解微塑料功能的发酵食品，推动其商业化应用</li>
+                        <li>医疗机构合作：与医疗机构合作，开展临床前研究，评估改造乳酸菌在人体肠道中的安全性。通过临床试验，验证其在降解微塑料和改善肠道健康方面的效果</li>
+                        <li>环保组织合作：与环保组织合作，推动微塑料污染的源头治理。通过宣传和倡议，呼吁减少塑料使用，从源头上减少微塑料的产生</li>
+                    </ul>
+                    <h2>更长远的发展方式</h2>
+                    <ul>
+                        <li>产品适用性：推出干粉产品，以满足不同用户的多种摄入方式需求</li>
+                        <li>技术推广：与企业合作，推动改造乳酸菌技术的产业化应用。通过技术转让和合作开发，将研究成果转化为实际产品</li>
+                        <li>合作伙伴关系：与环保组织、医疗机构和科研单位合作，推动产品的技术升级和市场渗透</li>
+                        <li>市场教育：通过科普宣传和健康讲座，提高公众对微塑料危害的认知</li>
+                        <li>可持续发展：我们将践行环保承诺，为消解微塑料危害做出持续努力，我们不仅提供了一款产品，更是一种健康生活方式的倡导。我们相信，科技与自然的结合，将为人类创造一个无塑的未来</li>
+                    </ul>
+                </div>
+                <div class="content-box" id="summary">
+                    <h2>总体概括</h2>
+                    <p>我们人类实践的结构，从内到外分层描绘，分别是工程、经济、社会/环保，这也是一个完整的 iGEM 项目的基本要素。</p>
+                    <div class="image-content">
+                        <img src="../images/human10.png" alt="描述图片" class="centered-image">
+                    </div>
+                    <h2>工程</h2>
+                    <p>在解决核心工程问题时，我们进行了一系列的人工实践。这些实践包括理解问题、探索解决方案的可能材料和生物途径、构建合成系统并通过进一步的迭代改进来验证预期的功能。</p>
+                    <h2>经济</h2>
+                    <p>围绕核心的是经济层，这是我们的技术工具适合的特定经济环境。在这方面，我们研究了参与合成生物学的公司和当前的微塑料降解产品，包括它们的优缺点，以全面了解市场可行性。我们还在商业方面构思了很多，设法扩大市场并降低了我们产品的费用。</p>
+                    <h2>社会与环保</h2>
+                    <p>外面是社会/政治层，与地球和大多数人相连，我们在这里考虑项目的社会关系和影响。具体来说，对于疗法开发，我们关注临床应用、医生意见、患者体验、生物安全和伦理问题。</p>
+                    <h1>我们的综合人类实践体现了识别社会需求和挑战、设计适当的解决方案、与不同的利益相关者互动以及根据他们的见解和反馈不断完善我们的项目的旅程。这种变革性的方法将我们的项目从实验室范围内的理论想法引导到一个既能有效解决现实世界问题又符合道德规范的解决方案。</h1>
+                </div>
+            </section>
         </div>
     </main>
     <footer>
         <p>&copy; 2023 我的网页项目</p>
     </footer>
     <script src="js/scripts.js"></script>
-    <script src="js/human-practice.js"></script>
+    <script src="js/human-practice-new.js"></script>
 </body>
 </html>

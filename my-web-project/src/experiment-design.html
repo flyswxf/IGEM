@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>实验设计 - 我的网页项目</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
     <header>
-        <div class="logo">TOF-BEs</div>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="TOF-BEs Logo" class="logo-image">
+            <span class="logo-text">TOF-BEs</span>
+        </a>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="projects.html">项目</a>
+                <li class="no-link">项目
                     <ul class="dropdown">
                         <li><a href="project-introduction.html">项目介绍</a></li>
                         <li><a href="project-design.html">项目设计</a></li>
@@ -27,10 +31,34 @@
         </nav>
     </header>
     <main>
-        <section>
-            <h2>实验设计</h2>
-            <p>这里是实验设计页面的内容。</p>
-        </section>
+        <div class="image-title-container">
+            <img src="../images/head-on-experiment.jpg" alt="实验" class="responsive-image">
+            <div class="image-title">EXPERIMENT</div>
+        </div>
+        <div class="container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#design">实验设计</a></li>
+                    <li><a href="#plasmid">质粒构建</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <div id="design" class="content-box">
+                    <h2>实验设计&预期结果</h2>
+                    <img src="../images/experiment1.png" alt="描述图片" class="centered-image">
+                    <p>测试Cas9-VP64对质粒表达的促进作用，将PETase换成GFP，测试单独Cas9（左）与Cas-VP64（右）之间表达量的区别，Cas9-VP64促进表达。</p>
+                    <img src="../images/experiment2.png" alt="描述图片" class="centered-image">
+                    <p>左图是观察乳植杆菌内的绿色荧光蛋白表达情况；</p>
+                    <p>右图是观察乳植杆菌分泌到细胞外的绿色荧光蛋白浓度。</p>
+                </div>
+                <div id="plasmid" class="content-box">
+                    <h2>质粒构建</h2>
+                    <img src="../images/plasmid.png" alt="描述图片" class="centered-image">
+                    <p>左图为构建的GFP质粒，用于做上述实验。</p>
+                    <p>我们还需检测微塑料降解后生成的对苯二甲酸（TPA）和乙二醇（EG），能否通过乳酸菌自身的代谢系统代谢，若不能则需继续联合其他益生菌进行模拟肠道菌群，观察最终产物代谢情况。</p>
+                </div>
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 我的网页项目</p>

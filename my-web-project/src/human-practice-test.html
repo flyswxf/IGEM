@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>项目设计 - 我的网页项目</title>
+    <title>人类实践 - 我的网页项目</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/human-practice.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
-    <!-- 使用分享箭头 -->
-
 </head>
 <body>
     <header>
@@ -35,20 +35,17 @@
     </header>
     <main>
         <div class="image-title-container">
-            <img src="../images/head-on-project-design.jpg" alt="建模" class="responsive-image">
-            <div class="image-title">PROJECT DESIGN</div>
+            <img src="../images/head-on-human-practice.jpg" alt="建模" class="responsive-image">
+            <div class="image-title">HUMAN PRACTICE</div>
         </div>
         <div class="container">
-            <aside class="sidebar">
-                <ul>
-                    <li><a href="#degradation">微塑料降解模块</a></li>
-                    <li><a href="#safety">基于与门的安全模块</a></li>
-                </ul>
-            </aside>
+            <div class="overview-section">
+                <div class="overview-content">
+                    <h1>我们的工作包括3R循环--”Record, Reflect,Renew”</h1>
+                    <p>我们的人类实践工作中始终保持“你的工作如何影响世界，世界如何影响你的工作。”的思考，即认识世界发现理解问题，采取具体策略行动来解决问题，更用实践检验和产品反馈来改进工作成果。</p>
+                </div>
+            </div>
             <section class="content">
-                <!-- <div class="breadcrumb">
-                    项目 &gt;  <a href="project-design.html">项目设计</a>
-                </div> -->
                 <div id="about" class="content-box">
                     <h2>能定位在肠道中并在有/无进食时自动调节强度的微塑料降解模块</h2>
                     <p>工程菌通过pH敏感启动子pgadA在小肠（pH值6.8左右）时启动，生成sgRNA。乳酸敏感启动子plldPRD响应乳酸刺激，在进食时生成Cas9。工程菌进入人体后，Cas9与sgRNA结合，切除PETase基因终止密码子，启动PETase/MHETase合成，并通过LamB信号肽通过SEC途径分泌到细胞外。</p>
@@ -57,18 +54,79 @@
                 </div>
                 <div id="safety" class="content-box">
                     <h2>基于与门的安全模块</h2>
+                    
                     <p>YF1是一种光敏激酶，能在黑暗中保持磷酸化状态，而在蓝光照射下去磷酸化。而FixJ是响应调节因子。</p>
                     <p>通过将光感应系统（YF1-FixJ）与温度感应系统（Cl）结合，构建了一个OR逻辑门。该系统使乳酸菌在光照时间过长或温度低于30℃时启动MazF自杀系统，从而实现在体外的可控灭活。</p>
                     <p>将工程菌与低聚糖（一种膳食纤维）放在一起。在摄入人体之前，由于识别pQIT启动子：这类启动子对低浓度光敏感，合成MazE抑制MazF的作用。而低聚糖这类益生元还可以帮助乳酸菌定植。</p>
                     <img src="../images/project-design-content2.png" alt="描述图片" class="centered-image">
                 </div>
             </section>
+            <div class="main-content">
+                <div class="timeline-container">
+                    <div class="polygon-roller">
+                      <!-- 研究项1 -->
+                      <div class="research-item active">
+                        <div class="textcontent">
+                            <h3>基因回路优化</h3>
+                            <p>王小明 · 2024.03</p>
+                        </div>
+                        <img src="../images/person1-1.jpg" class="avatar" alt="王小明">
+                      </div>
+                  
+                      <!-- 研究项2 -->
+                      <div class="research-item">
+                        <div class="textcontent">
+                            <h3>高通量筛选平台</h3>
+                            <p>李晓红 · 2024.05</p>
+                        </div>
+                        <img src="../images/person1-2.jpg" class="avatar" alt="李晓红">
+
+                      </div>
+
+                      <!-- 研究项3 -->
+                      <div class="research-item">
+                        <div class="textcontent">
+                            <h3>基因编辑技术</h3>
+                            <p>张三 · 2024.07</p>
+                        </div>
+                        <img src="../images/person1-3.jpg" class="avatar" alt="张三">
+
+                      </div>
+                  
+                      <!-- 更多研究项... -->
+                    </div>
+                    <div class="dots-container"></div> <!-- 新增指示点容器 -->
+                </div>
+
+                <div class="detail-panel">
+                    <div class="detail-content">
+                        <h2 class="detail-title"></h2>
+                        <div class="detail-meta">
+                          <span class="researcher"></span>
+                          <span class="date"></span>
+                        </div>
+                        <p class="detail-text"></p>
+                        <button class="read-more-btn">阅读更多</button>
+                      </div>
+                </div>
+
+                <!-- 弹窗 -->
+                <div class="modal" id="research-modal">
+                    <div class="modal-content">
+                        <span class="close-btn">&times;</span>
+                        <h2 class="modal-title"></h2>
+                        <p class="modal-researcher"></p>
+                        <p class="modal-date"></p>
+                        <p class="modal-text"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
         <p>&copy; 2023 我的网页项目</p>
     </footer>
     <script src="js/scripts.js"></script>
-    <script src="js/reference.js"></script>
+    <script src="js/human-practice.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const sections = document.querySelectorAll('.content-box');
+    const sections = document.querySelectorAll('.content-box, .text-content, .h2');
     const navLinks = document.querySelectorAll('.sidebar ul li a');
     const sidebar = document.querySelector('.sidebar');
     const content = document.querySelector('.content');
@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sections.forEach(section => {
             const sectionTop = section.offsetTop;
             const sectionHeight = section.clientHeight;
-            if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            if (pageYOffset >= sectionTop - sectionHeight/3) {
                 current = section.getAttribute('id');
             }
         });
@@ -45,4 +45,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     
     
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.sidebar ul li a');
+
+    for (const link of links) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    }
 });

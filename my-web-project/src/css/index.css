@@ -58,6 +58,14 @@
     opacity: 1;
 }
 
+.black-banner {
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
 
 /* 一标题下面几个图片 */
 .feature-container {
@@ -121,6 +129,13 @@
 
 .text-content h2 {
     margin-bottom: 10px;
+}
+
+/* 黑色区域中内容 */
+.text-content h3 { 
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    
 }
 
 .text-content p {

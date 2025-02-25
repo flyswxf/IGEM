@@ -75,7 +75,7 @@
     background: rgba(255, 255, 255, 0.95);
     border-radius: 20px;
     padding: 40px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); */
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -260,4 +260,116 @@
 
 .read-more-btn:hover {
     background-color: #0056b3;
+}
+
+
+/* 一边文本一边图 */
+.content-block-row {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin: 40px 0;/* 调整上下外边距 */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.content-block-column {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  align-items: center;
+  margin: 40px 0;/* 调整上下外边距 */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.text-content {
+  flex: 1;
+  margin-left: 0px;
+  align-items: start;
+  justify-content: center;
+}
+
+.text-content h2 {
+  margin-bottom: 10px;
+}
+
+/* 黑色区域中内容 */
+.text-content h3 { 
+  margin-bottom: 10px;
+  font-size: 1.5em;
+  
+}
+
+.text-content p {
+  margin: 10px 0;
+}
+
+/* 强调内容下划线 */
+.double-underline {
+  text-decoration: underline;
+  text-decoration-color: blue;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2px;
+  position: relative;
+}
+
+.double-underline::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -2px;
+  border-bottom: 2px solid blue;
+}
+
+.image-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.image-content img {
+  max-width: 100vh;
+  max-height: 800px;
+  border-radius: 8px;
+  object-fit: cover;
+  margin: 20px 0;
+}
+
+
+.image-content-row {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 一行两图片 */
+.image-wrapper img {
+  max-width: 100%;
+  max-height: 800px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.image-wrapper {
+  flex: 1;
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px; /* 添加图片间距 */
+}
+
+.image-caption {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+  line-height: 1.5;
+  max-width: 90%; /* 防止文字过长 */
 }

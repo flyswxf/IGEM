@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>建模 - 我的网页项目</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/sidebar.css">
 </head>
 <body>
     <header>
-        <a href="index.html" class="logo">TOF-BEs</a>
+        <a href="index.html" class="logo">
+            <img src="../images/logo.png" alt="TOF-BEs Logo" class="logo-image">
+            <span class="logo-text">TOF-BEs</span>
+        </a>
         <nav>
             <ul class="navbar">
                 <li><a href="index.html">首页</a></li>
-                <li><a href="projects.html">项目</a>
+                <li class="no-link">项目
                     <ul class="dropdown">
                         <li><a href="project-introduction.html">项目介绍</a></li>
                         <li><a href="project-design.html">项目设计</a></li>
@@ -31,10 +35,46 @@
             <img src="../images/head-on-modeling.png" alt="建模" class="responsive-image">
             <div class="image-title">MODELING</div>
         </div>
-        <section>
-            <h2>建模</h2>
-            <p>这里是建模页面的内容。</p>
-        </section>
+        <div class="container">
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#model">乳酸杆菌的增长模型</a></li>
+                    <li><a href="#impact">乳酸对降解酶的影响</a></li>
+                </ul>
+            </aside>
+            <section class="content">
+                <!-- <div class="breadcrumb">
+                    项目 &gt;  <a href="project-design.html">项目设计</a>
+                </div> -->
+                    <div id="model" class="content-box">
+                    <h2>植物乳植杆菌DT88在肠道内定植后的增长模型: </h2>
+                    <p>使用Logistic增长模型来描述这种细菌在有限资源环境中的增长行为。</p>
+                    <img src="../images/math1.png" alt="公式" class="centered-image">
+                    <div class="description">
+                        <ul>
+                            <li>N(t) 表示时间 t 时刻的细菌数量</li>
+                            <li>r 是细菌的增长速率</li>
+                            <li>K 是环境的承载能力，表示肠道能够容纳的最大细菌数量</li>
+                        </ul>
+                    </div>
+                    <img src="../images/bacteria_growth.png" alt="公式" class="centered-image">
+                </div>
+                <div id="impact" class="content-box">
+                    <h2>乳酸对体内质粒反应产生微塑料降解酶数量的影响</h2>
+                    <p>描述乳酸浓度与微塑料降解酶产量之间的关系, 可以采用Michaelis-Menten动力学模型，该转型常用于描述酶反应的速率与底物浓度之间的关系。</p>
+                    <img src="../images/math2.png" alt="公式" class="centered-image">
+                    <div class="description">
+                        <ul>
+                            <li>Vmax是酶的最大生成速率，表示当乳酸浓度达到非常高时，微塑料降解酶的生成速率</li>
+                            <li>[L] 是乳酸的浓度</li>
+                            <li>Km 是乳酸浓度的半饱和常数，即使乳酸浓度为 Km 时，酶反应速率为最大速率的一半</li>
+                        </ul>
+                    </div>
+                    <img src="../images/enzyme_production.png" alt="公式" class="centered-image">
+                </div>
+                
+            </section>
+        </div>
     </main>
     <footer>
         <p>&copy; 2023 我的网页项目</p>
