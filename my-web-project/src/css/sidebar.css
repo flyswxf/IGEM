@@ -1,8 +1,10 @@
 /* 侧边栏样式 */
 .sidebar {
-    width: 200px;
+    max-width: 300px;
+    min-width: 200px;
     /* background-color: rgba(248, 248, 248, 0.8); */
     padding: 20px;
+    margin-left:0px;
     margin-top: 150px; /* 调整顶部间距 */
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     position: absolute; 
@@ -44,4 +46,50 @@
 .sidebar ul li a.active {
     background-color: #ddd;
     transform: scale(1.05);
+}
+
+
+/* 新增子菜单样式 */
+.sidebar ul .submenu {
+    margin-left: 20px; /* 子菜单缩进 */
+    margin-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+/* 添加展开箭头 */
+.has-submenu > a::after {
+    content: "▸";
+    float: right;
+    transition: transform 0.3s;
+}
+
+/* 悬停展开子菜单 */
+.has-submenu:hover .submenu {
+    max-height: 300px; /* 根据实际内容调整 */
+}
+
+.has-submenu:hover > a::after {
+    transform: rotate(90deg);
+}
+
+/* 子菜单项样式 */
+.submenu li {
+    margin-bottom: 5px;
+}
+
+.submenu a {
+    padding: 8px 10px !important;
+    background-color: #e8e8e8 !important;
+    font-size: 0.9em;
+}
+
+/* 调整主菜单项间距 */
+.sidebar ul > li:not(.has-submenu) {
+    margin-bottom: 10px;
+}
+
+.has-submenu {
+    margin-bottom: 5px !important;
 }

@@ -41,11 +41,39 @@
         <div class="container">
             <aside class="sidebar">
                 <ul>
-                    <li><a href="#general">发现问题</a></li>
+                    <li class="has-submenu">
+                        <a href="#general">收听世界：发现问题</a>
+                        <ul class="submenu">
+                            <li><a href="#what">微塑料究竟是什么？</a></li>
+                            <li><a href="#everywhere">无孔不入的微塑料渗透</a></li>
+                            <li><a href="#health">微塑料正在吞噬我们的健康</a></li>
+                            <li><a href="#harm">微塑料的危害机制</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#inspiration">灵感与希望</a></li>
-                    <li><a href="#questionnaire">问卷调查</a></li>
-                    <li><a href="#public">公共</a></li>
-                    <li><a href="#business">创业</a></li>
+                    <li class="has-submenu">
+                        <a href="#questionnaire">问卷调查</a>
+                        <ul class="submenu">
+                            <li><a href="#attetion">关注度</a></li>
+                            <li><a href="#concern">顾虑</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#public">公共</a>
+                        <ul class="submenu">
+                            <li><a href="#concert">科普讲座</a></li>
+                            <li><a href="#socialmedia">社交媒体宣传</a></li>
+                            <li><a href="#film">科普影片</a></li>
+                            <li><a href="#hand">科普手册</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#business">创业</a>
+                        <ul class="submenu">
+                            <li><a href="#map">利益相关者地图</a></li>
+                            <li><a href="#analysis">利益相关者的 SWOT 分析</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#summary">总结</a></li>
                 </ul>
             </aside>
@@ -91,15 +119,20 @@
                             <div class="image-content">
                                 <img src="../images/human4.png" alt="描述图片" class="centered-image">
                             </div>
-                            <h3>微塑料的危害机制: </h3>
-                            <button class="read-more-btn">阅读更多</button>
-                            <!-- 弹窗 -->
-                            <div class="modal" id="strategy-modal">
+                            <h2 id="harm">微塑料的危害机制: </h2>
+                            <!-- 第二个人类策略弹窗 -->
+                            <button class="read-more-btn" data-modal="human-modal">阅读更多</button>
+                            <div class="modal" id="human-modal">
                                 <div class="modal-content">
-                                    <span class="close-btn">&times;</span>
-                                    <div class="image-content">
-                                        <img src="../images/human31.png" alt="描述图片" class="centered-image">
-                                        <img src="../images/human32.png" alt="描述图片" class="centered-image">
+                                    <span class="close-btn" data-modal="human-modal">&times;</span>
+                                    <div class="image-grid">
+                                        <div class="image-item">
+                                            <img src="../images/human31.png" alt="描述图片">
+                                        </div>
+                                        <div class="image-item">
+                                            <img src="../images/human32.png" alt="描述图片">
+                                        </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -187,10 +220,10 @@
                     <!-- <h2>Renew：更上一层楼</h2> -->
                     <!-- <p>政策建议：向政府相关部门提交政策建议，呼吁加强对微塑料污染的监管。建议制定更严格的塑料制品生产和使用标准，推动可降解材料的研发和应用。</p> -->
                 <!-- </div> -->
-                <div class="content-box" id="public">
+                <div class="content-box" id="public"> 
                     <h2>公共：讲座、视频和手册</h2>
                     <p>我们的教育模块致力于通过一系列精心设计的活动，向不同年龄段的群体普及合成生物学知识。我们的目标是激发中学生、大学生和公众的科学兴趣并培养科学素养。</p>
-                    <h2>科普讲座</h2>
+                    <h2 id="concert">科普讲座</h2>
                     <p>我们寒假期间返校宣讲的同时在高中课堂展开微塑料与合成生物学主题科普讲座，精心设计了互动环节，
                         介绍微塑料的来源、危害及乳酸菌降解技术的原理。通过互动实验和展示，让同学们直观了解微塑料对健康的影响，
                         鼓励他们思考如何通过自己的行动保护地球，从而向他们灌输责任感和使命感。
@@ -198,22 +231,68 @@
                     <div class="image-content">
                         <img src="../images/human71.jpg" alt="描述图片" class="centered-image">
                     </div>
-                    <h2>社交媒体宣传</h2>
+                    <h2 id="socialmedia">社交媒体宣传</h2>
                     <p>我们创建公众号，定期发布图文内容，利用社交媒体平台发布项目进展和科普内容，吸引公众关注。
                         通过短视频、图文等形式，传播微塑料污染的严重性和乳酸菌降解技术的潜力。</p>
                     <div class="image-content">
                         <img src="../images/human72.png" alt="描述图片" class="centered-image">
                         <img src="../images/human73.png" alt="描述图片" class="centered-image">
                     </div>
-                    <h2>科普影片</h2>
+                    <h2 id="film">科普影片</h2>
                     <p>对于公众，我们通过各种主要媒体平台发布了科普视频，例如哔哩哔哩、抖音、YouTube、Facebook 和 Instagram。发布视频。旨在以通俗易懂的方式普及科学知识。
                         这些视频涵盖了合成生物学的基本原理和应用，旨在提高公众的科学素养并激发他们对科学的兴趣。
                         通过动画和插图，我们使复杂的科学概念变得简单易懂，确保来自不同背景的观众都能受益。这些视频收到了许多网友的好评。</p>
-                    <h2>科普手册</h2>
+                    <h2 id="hand">科普手册</h2>
                     <p>我们还制作了一本旨在普及微塑料知识和提高公众科学素养的科普手册。该手册详细介绍了微塑料的来源，积累危害和降解方式，帮助读者了解这一复杂的医学问题，从而提高健康意识和降解的警觉性。
                         同时，它解释了改造乳酸菌降解体内微塑料研发的产品所涉及的科学原理，增强了读者对医疗过程的理解。
                         此外，该手册深入探讨了合成生物学和 iGEM 竞赛，激发了人们对这一新兴科学领域的兴趣，并展示了合成生物学在降解体内微塑料和制造生物产品中的应用，突出了其创新和潜在有效性。该手册还描述了 iGEM 团队的工作流程，传达了科学研究的基本方法，培养了读者的科学思维和解难能力。鼓励读者思考科学原理在日常生活和职业发展中的应用。
                         </p>
+                    <!-- 第一个手册弹窗 -->
+                    <button class="read-more-btn" data-modal="manual-modal">查看手册</button>
+                    <div class="modal" id="manual-modal">
+                        <div class="modal-content">
+                            <span class="close-btn" data-modal="manual-modal">&times;</span>
+        
+                            <div class="image-grid">
+                                <div class="image-item">
+                                    <img src="../images/hand1.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand2.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand3.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand4.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand5.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand6.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand7.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand8.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand9.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand10.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand11.png" alt="描述图片">
+                                </div>
+                                <div class="image-item">
+                                    <img src="../images/hand12.png" alt="描述图片">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="content-box" id="business">
                     <h2>创业</h2>
@@ -223,7 +302,7 @@
                     <p>我们创新的基因编辑乳酸菌技术，基于 CRISPR-Cas9 系统，能够精准降解体内微塑料，并将其转化为无害的小分子物质。通过与益生菌干粉产品的结合，我们不仅解决了微塑料在人体内的积累问题，还为用户提供了肠道健康和免疫增强的双重益处，为消费者和医疗保健提供者提供无与伦比的健康保障。我们的产品不仅适用于普通人群，更是为长期暴露在高污染环境中的高风险群体（如外卖族、工业区居民）量身定制。</p>
                     <!-- <h2>可持续的商业模式</h2> -->
                     <!-- <p>旨在通过战略定位和市场合作，确保产品的成功推广和广泛应用</p> -->
-                    <div class="text-content">
+                    <div class="text-content" id="map">
                         <h2>利益相关者地图</h2>
                         <p>我们充分考量利益相关者（包括公众、研发人员、 医生和投资公司）之间的的关系，协调平衡各个组的需求，并进一步与更广泛的利益相关者合作。
                             我们根据利益相关者在项目中的影响力和兴趣对参与项目的利益相关者进行了详细的分类。根据 Mendelow 矩阵绘制利益相关者地图。</p>
@@ -231,7 +310,7 @@
                     <div class="image-content">
                         <img src="../images/human81.png" alt="描述图片" class="centered-image">
                     </div>
-                    <div class="text-content">
+                    <div class="text-content" id="analysis">
                         <h2>利益相关者的 SWOT 分析</h2>
                         <p>了解和解决利益相关者的利益对于项目的成功至关重要。他们的观点、需求和关注点会显著影响项目的方向，进展和结果，必须与他们进行密切有效的互动。通过执行对与每个利益相关者群体相关的优势、劣势、机会和威胁进行全面分析，能够更好地预测和应对潜在挑战，从而优化可用资源的使用以实现其目标。
                             这种全面的方法不仅增强了我们对项目前景的把握，也在整个各个阶段使我们做出调整。</p>
@@ -267,13 +346,13 @@
                     <p>围绕核心的是经济层，这是我们的技术工具适合的特定经济环境。在这方面，我们研究了参与合成生物学的公司和当前的微塑料降解产品，包括它们的优缺点，以全面了解市场可行性。我们还在商业方面构思了很多，设法扩大市场并降低了我们产品的费用。</p>
                     <h2>社会与环保</h2>
                     <p>外面是社会/政治层，与地球和大多数人相连，我们在这里考虑项目的社会关系和影响。具体来说，对于疗法开发，我们关注临床应用、医生意见、患者体验、生物安全和伦理问题。</p>
-                    <h1>我们的综合人类实践体现了识别社会需求和挑战、设计适当的解决方案、与不同的利益相关者互动以及根据他们的见解和反馈不断完善我们的项目的旅程。这种变革性的方法将我们的项目从实验室范围内的理论想法引导到一个既能有效解决现实世界问题又符合道德规范的解决方案。</h1>
+                    <h3><span class="keyword-underline">我们的综合人类实践体现了识别社会需求和挑战、设计适当的解决方案、与不同的利益相关者互动以及根据他们的见解和反馈不断完善我们的项目的旅程。这种变革性的方法将我们的项目从实验室范围内的理论想法引导到一个既能有效解决现实世界问题又符合道德规范的解决方案。</span></h3>
                 </div>
             </section>
         </div>
     </main>
     <footer>
-        <p>&copy; 2023 我的网页项目</p>
+        <p>&copy;TOF-BioEngineers</p>
     </footer>
     <script src="js/scripts.js"></script>
     <script src="js/human-practice-new.js"></script>

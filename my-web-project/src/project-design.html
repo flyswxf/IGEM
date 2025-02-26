@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/project.css">
+    <link rel="stylesheet" href="css/reference.css">
     <!-- 使用分享箭头 -->
 
 </head>
@@ -35,38 +37,113 @@
     </header>
     <main>
         <div class="image-title-container">
-            <img src="../images/head-on-project-design.jpg" alt="建模" class="responsive-image">
+            <img src="../images/head-on-project-design2.jpg" alt="建模" class="responsive-image">
             <div class="image-title">PROJECT DESIGN</div>
         </div>
         <div class="container">
             <aside class="sidebar">
                 <ul>
-                    <li><a href="#degradation">微塑料降解模块</a></li>
-                    <li><a href="#safety">基于与门的安全模块</a></li>
+                    <li class="has-submenu">
+                        <a href="#1re">周期一</a>
+                        <ul class="submenu">
+                            <li><a href="#1re">研究</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#2th">周期二</a>
+                        <ul class="submenu">
+                            <li><a href="#1re">思考</a></li>
+                            <li><a href="#2ex">设计与建造</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#3th">周期三</a>
+                        <ul class="submenu">
+                            <li><a href="#3th">思考</a></li>
+                            <li><a href="#3ex">实验</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#4le">周期四</a>
+                        <ul class="submenu">
+                            <li><a href="#4le">学习</a></li>
+                            <li><a href="#4ex">实验</a></li>
+                        </ul>
+                    </li>
+                    <li class="has-submenu">
+                        <a href="#5le">周期五</a>
+                        <ul class="submenu">
+                            <li><a href="#5le">学习</a></li>
+                            <li><a href="#5ex">实验</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </aside>
             <section class="content">
                 <!-- <div class="breadcrumb">
                     项目 &gt;  <a href="project-design.html">项目设计</a>
                 </div> -->
-                <div id="about" class="content-box">
-                    <h2>能定位在肠道中并在有/无进食时自动调节强度的微塑料降解模块</h2>
+                <div class="content-box">
+                    <p>我们的项目有迭代过程，并且根据工程循环，每一代形成了一个完整的工程周期：<span class="keyword-underline">研究、思考、设计、建造、测试和学习</span>。</p>
+                </div>
+                <div id="1re" class="content-box">
+                    <h2>周期一：研究</h2>
+                    <p>在项目的第一个工程周期中，我计划让工程菌在胃内启动程序。根据文献研究，微塑料在小肠的吸收效果最为显著，因此我希望食物在小肠消除其中的微塑料。</p>
+                    <p>我们模拟肠道环境，发现比起其他类型的乳酸菌，植物乳植杆菌自身可以抵御小肠内的胆盐，在小肠内定植生长。</p>
+                    <p>我们决定将底盘菌由普通的乳酸菌改为植物乳植杆菌。好处如下：
+                        <ol>
+                            <li>植物乳植杆菌DT88能够主动吸附微塑料。（查阅文献得）</li>
+                            <li>作为一种乳酸菌，植物乳植杆菌是肠道益生菌，能够补充因微塑料污染而受损的肠道菌群。</li>
+                            <li>植物乳植杆菌能够稳定定植在小肠内，发挥其功能。</li>
+                        </ol>
+                </div>
+                <div id="2th" class="content-box">
+                    <h2>周期二：思考</h2>
+                    <p>在第二个工程周期中，我需要工程菌在小肠内启动，我选择了使用pH值敏感的启动子，因为小肠的pH值大约为6.8。经过进一步思考，我意识到pH值在许多情况下都维持在6.8左右。因此，我开始考虑在小肠中是否有乳酸菌特征性物质的存在。研究发现，当食物遇到乳酸菌时，乳酸菌会产生乳酸。基于此，我设计了一个结合pH值与乳酸敏感的与门来启动塑料降解酶的表达，并最终决定采用CRISPR-Cas9技术。</p>
+                </div>
+                <div class="content-box">
+                    <h2>周期二：设计与建造</h2>
                     <p>工程菌通过pH敏感启动子pgadA在小肠（pH值6.8左右）时启动，生成sgRNA。乳酸敏感启动子plldPRD响应乳酸刺激，在进食时生成Cas9。工程菌进入人体后，Cas9与sgRNA结合，切除PETase基因终止密码子，启动PETase/MHETase合成，并通过LamB信号肽通过SEC途径分泌到细胞外。</p>
                     <p>在肠道定植后，PETase终止密码子已被切除，工程菌可在无进食时微量表达微塑料降解酶，降解日常水中微塑料；进食时，Cas9-VP64相当于dCas9-VP64作用，促进PETase大量表达，增强食物中微塑料的降解能力。</p>
-                    <img src="../images/project-design-content.png" alt="描述图片" class="centered-image">
+                    <div class="image-wrapper">
+                        <img src="../images/project-design-content.png" alt="描述图片" class="centered-image">
+                        <span class="image-caption">能定位在肠道中并在有/无进食时自动调节强度的微塑料降解模块</span>
+                    </div>
                 </div>
                 <div id="safety" class="content-box">
-                    <h2>基于与门的安全模块</h2>
-                    <p>YF1是一种光敏激酶，能在黑暗中保持磷酸化状态，而在蓝光照射下去磷酸化。而FixJ是响应调节因子。</p>
-                    <p>通过将光感应系统（YF1-FixJ）与温度感应系统（Cl）结合，构建了一个OR逻辑门。该系统使乳酸菌在光照时间过长或温度低于30℃时启动MazF自杀系统，从而实现在体外的可控灭活。</p>
-                    <p>将工程菌与低聚糖（一种膳食纤维）放在一起。在摄入人体之前，由于识别pQIT启动子：这类启动子对低浓度光敏感，合成MazE抑制MazF的作用。而低聚糖这类益生元还可以帮助乳酸菌定植。</p>
-                    <img src="../images/project-design-content2.png" alt="描述图片" class="centered-image">
+                    <h2 id="2ex">周期二：实验</h2>
+                    <a class="reference-link" href="experiment-design.html#two">见实验二：测定CRISPR-Cas9线路的可行性</a>
                 </div>
+                <div id="3th" class="content-box">
+                    <h2>周期三：思考</h2>
+                    <p>在第三个工程周期中，我意识到CRISPR-Cas9只是一个开关，类似于手机的静音键，只负责把声音打开，然而，人体在进食时需要大量的微塑料降解酶，而在不进食时，只需少量降解酶用于处理塑料微粒，如从塑料瓶中饮用水时摄入的微塑料。因此，我需要一个调节降解酶生产数量的元件，类似音量键的功能。我想到人们合成dCas9-VP64去促进基因线路的表达，那么我现在已经有一个Cas9了，我可以将它与VP64结合，让它在当完“静音键”后转变成“音量键”</p>
+                </div>
+                <div id="3ex" class="content-box">
+                    <h2>周期三：实验</h2>
+                    <a class="reference-link" href="experiment-design.html#three">见实验三：测试工程菌的能否根据是否进食自动调节酶的产生量</a>
+                </div>
+                <div id="4le" class="content-box">
+                    <h2>周期四：学习</h2>
+                    <p>在第四个工程周期中，我最初只计划插入PETase降解酶。然而，研究发现仅使用PETase时，PET聚合物只能转化为MHET聚合物，并未完全降解为小分子。为了实现完全降解，我在PETase后加入了MHETase，从而将产物完全降解为小分子——对苯二甲酸TPA和乙二醇EG。这些小分子可以通过肠道菌群的代谢作用转化为无毒的最终产物。</p>
+                </div>
+                <div id="4ex" class="content-box">
+                    <h2>周期四：实验</h2>
+                    <a class="reference-link" href="experiment-design.html#four">见实验四：最终产物是否无毒</a>
+                </div>
+                <div id="4le" class="content-box">
+                    <h2>周期五：学习</h2>
+                    <p>在第五个工程周期中，我想将我们的工程菌从被动攻击转为主动攻击，原先的设计为，由于微塑料会破坏乳酸菌，所以当它们攻击工程菌时，工程菌会破坏释放体内微塑料降解酶，但我希望微塑料可以主动分泌降解酶，所以我通过查阅资料，决定加入LamB元件，确保酶通过Sec依赖性途径细胞外分泌。</p>
+                </div>
+                <div id="5ex" class="content-box">
+                    <h2>周期五：实验</h2>
+                    <a class="reference-link" href="experiment-design.html#five">见实验五：LamB元件提高外源蛋白的分泌效率</a>
+                </div>
+                
             </section>
         </div>
     </main>
     <footer>
-        <p>&copy; 2023 我的网页项目</p>
+        <p>&copy;TOF-BioEngineers</p>
     </footer>
     <script src="js/scripts.js"></script>
     <script src="js/reference.js"></script>

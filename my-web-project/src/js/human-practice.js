@@ -15,16 +15,16 @@ class PolygonRoller {
         text: document.querySelector('.detail-text'),
       };
       // 右侧的readmore面板
-      this.readMoreBtn = document.querySelector('.read-more-btn');
-      this.modal = document.getElementById('research-modal');
-      this.modalTitle = this.modal.querySelector('.modal-title');
-      this.modalResearcher = this.modal.querySelector('.modal-researcher');
-      this.modalDate = this.modal.querySelector('.modal-date');
-      this.modalText = this.modal.querySelector('.modal-text');
-      this.closeBtn = this.modal.querySelector('.close-btn');
+      // this.readMoreBtn = document.querySelector('.read-more-btn');
+      // this.modal = document.getElementById('research-modal');
+      // this.modalTitle = this.modal.querySelector('.modal-title');
+      // this.modalResearcher = this.modal.querySelector('.modal-researcher');
+      // this.modalDate = this.modal.querySelector('.modal-date');
+      // this.modalText = this.modal.querySelector('.modal-text');
+      // this.closeBtn = this.modal.querySelector('.close-btn');
 
-      this.readMoreBtn.addEventListener('click', () => this.showModal());
-      this.closeBtn.addEventListener('click', () => this.hideModal());
+      // this.readMoreBtn.addEventListener('click', () => this.showModal());
+      // this.closeBtn.addEventListener('click', () => this.hideModal());
       window.addEventListener('click', (event) => {
           if (event.target === this.modal) {
               this.hideModal();

@@ -32,3 +32,59 @@
     text-decoration: none;
     cursor: pointer;
 }
+
+/* 图片容器 */
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    gap: 15px;
+    padding: 25px;
+}
+
+/* 单张图片样式 */
+.image-item {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    /* background: linear-gradient(145deg, rgba(40,40,50,0.8), rgba(60,60,70,0.8)); */
+}
+
+.image-item img {
+    width:100%;
+    max-width: 100vh;
+    max-height: 800px;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 20px 0;
+}
+
+/* 悬停效果 */
+.image-item:hover {
+    transform: translateY(-5px);
+}
+
+.image-item:hover img {
+    opacity: 0.9;
+}
+
+/* 图片边框动画 */
+.image-item::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 8px;
+    padding: 1px;
+
+}
+
+@keyframes shimmer {
+    0% { background-position: -1000px 0; }
+    100% { background-position: 1000px 0; }
+}
+
+.loading-placeholder {
+    animation: shimmer 2s infinite linear;
+    background: linear-gradient(to right, #2a2a35 4%, #3a3a45 25%, #2a2a35 36%);
+    background-size: 1000px 100%;
+}

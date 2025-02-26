@@ -1,0 +1,60 @@
+.image-wrapper {
+    flex: 1;
+    /* max-width: 50%; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px; /* 添加图片间距 */
+  }
+  
+  .image-caption {
+    margin-top: 12px;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 90%; /* 防止文字过长 */
+  }
+  
+.design-link {
+    display: inline-block;
+    color: #4a5568;  /* 中灰色 */
+    text-decoration: none;
+    font-size: 16px;
+    font-family: -apple-system, sans-serif;
+    transition: all 0.2s ease;
+    position: relative;
+    padding: 8px 20px;
+    background: #f7fafc;  /* 浅灰背景 */
+    border-radius: 4px;
+    margin: 5px 0;
+}
+
+.design-link:hover {
+    color: #2d3748;  /* 深灰色 */
+    background: #edf2f7;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.design-link:active {
+    transform: translateY(0);
+}
+
+.design-link::after {
+  content: '\f08e';
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+  color: #1a73e8;
+  transition: color 0.3s ease;
+}
+
+.design-link:hover::after {
+    margin-left: 12px;
+    opacity: 1;
+}

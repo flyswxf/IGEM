@@ -34,18 +34,33 @@
     </header>
     <main>
         <div class="image-title-container">
-            <img src="../images/head-on-project-intro.jpg" alt="项目介绍" class="responsive-image">
+            <img src="../images/head-on-project-introduction2.jpg" alt="项目介绍" class="responsive-image">
             <div class="image-title">PROJECT INTRODUCTION</div>
         </div>
         <div class="container">
-            <aside class="sidebar">
+            <!-- <aside class="sidebar">
                 <ul>
                     <li><a href="#about">解决什么问题？</a></li>
                     <li><a href="#why-do">为什么要做这个项目？</a></li>
                     <li><a href="#why-fro">为什么设计成冻干粉？</a></li>
                     <li><a href="#why-DT88">为什么选择DT88？</a></li>
-                    <!-- <li><a href="#degradation">微塑料降解模块</a></li> -->
-                    <!-- <li><a href="#safety">基于与门的安全模块</a></li> -->
+                    <li><a href="#inspiration">灵感与创新点</a></li>
+                    <li><a href="#goal">项目目标</a></li>
+                    <li><a href="#references">参考文献</a></li>
+                </ul>
+            </aside> -->
+            <aside class="sidebar">
+                <ul>
+                    <li><a href="#about">解决什么问题？</a></li>
+                    <li><a href="#why-do">为什么要做这个项目？</a></li>
+                    <li><a href="#why-fro">为什么设计成冻干粉？</a></li>
+                    <li class="has-submenu">
+                        <a href="#why-DT88">为什么选择DT88？</a>
+                        <ul class="submenu">
+                            <li><a href="#degradation">微塑料降解模块</a></li>
+                            <li><a href="#safety">基于与门的安全模块</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#inspiration">灵感与创新点</a></li>
                     <li><a href="#goal">项目目标</a></li>
                     <li><a href="#references">参考文献</a></li>
@@ -79,7 +94,7 @@
                     <p>工程菌通过pH敏感启动子pgadA在小肠（pH值6.8左右）时启动，生成sgRNA。乳酸敏感启动子plldPRD响应乳酸刺激，在进食时生成Cas9。工程菌进入人体后，Cas9与sgRNA结合，切除PETase基因终止密码子，启动PETase/MHETase合成，并通过LamB信号肽通过SEC途径分泌到细胞外。</p>
                     <p>在肠道定植后，PETase终止密码子已被切除，工程菌可在无进食时微量表达微塑料降解酶，降解日常水中微塑料；进食时，Cas9-VP64相当于dCas9-VP64作用，促进PETase大量表达，增强食物中微塑料的降解能力。</p>
                     <img src="../images/project-design-content.png" alt="描述图片" class="centered-image">
-                    <h2 id="safety">基于与门的安全模块</h2>
+                    <h2 id="safety">基于或门的安全模块</h2>
                     <p>YF1是一种光敏激酶，能在黑暗中保持磷酸化状态，而在蓝光照射下去磷酸化。而FixJ是响应调节因子。</p>
                     <p>通过将光感应系统（YF1-FixJ）与温度感应系统（Cl）结合，构建了一个OR逻辑门。该系统使乳酸菌在光照时间过长或温度低于30℃时启动MazF自杀系统，从而实现在体外的可控灭活。</p>
                     <p>将工程菌与低聚糖（一种膳食纤维）放在一起。在摄入人体之前，由于识别pQIT启动子：这类启动子对低浓度光敏感，合成MazE抑制MazF的作用。而低聚糖这类益生元还可以帮助乳酸菌定植。</p>
@@ -138,7 +153,7 @@
         </div>
     </main>
     <footer>
-        <p>&copy; 2023 我的网页项目</p>
+        <p>&copy;TOF-BioEngineers</p>
     </footer>
     <script src="js/scripts.js"></script>
     <script src="js/reference.js"></script>
